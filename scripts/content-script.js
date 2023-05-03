@@ -65,9 +65,10 @@ const actionsScript = (actionId) => {
 
 chrome.runtime.onMessage.addListener(({ actionId }) => actionsScript(actionId));
 
-// Initialize the initial state
 document.onreadystatechange = () => {
   if (document.readyState === "complete") {
-    chrome.runtime.sendMessage("actionId");
+    chrome.runtime.sendMessage("get-action-id", (response) => {
+      actionsScript(response);
+    });
   }
 };
