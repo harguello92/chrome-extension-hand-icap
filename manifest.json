@@ -1,0 +1,23 @@
+{
+  "name": "Google meet hand-icap",
+  "version": "0.0.1",
+  "description": "Designed to improve the experience of using emoji reaction in google meet",
+  "manifest_version": 3,
+  "author": "harguello92",
+  "permissions": ["activeTab", "storage"],
+  "action":{
+      "default_popup": "popup/popup.html",
+      "default_title": "Google meet hand-icap"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content-script.js"],
+      "type": "module",
+      "matches": ["https://meet.google.com/*"]
+    }
+  ],
+  "icons": {
+    "32": "icons/icon-32.png",
+    "128": "icons/icon-128.png"
+  }
+}

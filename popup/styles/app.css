@@ -1,0 +1,34 @@
+main {
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+}
+
+.headerText {
+  margin-top: -6px;
+  font-size: 0.8rem;
+  text-align: right;
+  margin-right: 2px;
+  color: #5f6368;
+}
+
+section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+section.no-display {
+  display: none;
+}
+
+.cautionSlider {
+  margin-top: .8rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cautionSlider__dataList {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: .8rem;
+}

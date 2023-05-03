@@ -1,0 +1,22 @@
+{
+  "name": "google-meet-hand-icap",
+  "version": "0.0.1",
+  "description": "\"Designed to improve the experience of using emoji reaction in google meet",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harguello92/google-meet-hand-icap.git"
+  },
+  "author": "harguello92",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harguello92/google-meet-hand-icap/issues"
+  },
+  "homepage": "https://github.com/harguello92/google-meet-hand-icap#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}

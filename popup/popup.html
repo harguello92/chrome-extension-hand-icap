@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google meet hand-icap</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+    <main>
+        <header>
+          <img height="40" src="assets/google-meet-logo.svg">
+          <p class="headerText">hand-icap</p>
+        </header>
+        <section id="controller">
+          <p>Level of caution</p>
+          <input id="app-caution-slider" type="range" min="0" max="3" step="1" value="0" class="cautionSlider" list="listSlider">
+          <datalist class="cautionSlider__dataList" id="listSlider">
+            <option value="0">None</option>
+            <option value="1">Min</option>
+            <option value="2">Med</option>
+            <option value="3">Max</option>
+          </datalist>
+        </section>
+        <section id="notAvailable" class="no-display">
+          <p>The extension can only be used in <a href="https://meet.google.com/">meet.google.com</a></p>
+        </section>
+    </main>
+</body>
+<script type="module" src="popup.js"></script>
+</html>
