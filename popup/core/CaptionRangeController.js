@@ -1,34 +1,35 @@
 export default class CaptionRangeController {
   constructor({ storage, domElements }) {
-    this.name = "CaptionRangeController";
     this.storage = storage;
     this.domElements = domElements;
   }
 
-  async sendAction(action) {
+  async sendAction(actionId) {
     const [tab] = await chrome.tabs.query({
+      active: true,
       lastFocusedWindow: true,
     });
 
     chrome.tabs.sendMessage(tab.id, {
-      caseId: action,
+      actionId,
     });
   }
 
   doBinds() {
-    this.domElements.slider.addEventListener("input", async ({ target }) => {
-      await chrome.storage.session.set({ caseId: target.value });
-      await this.sendAction(target.value);
-    });
-
-    document.body.addEventListener("load", async () => {
-      await this.sendAction(caseId);
-      const caseId = await chrome.storage.session.get("caseId");
-      this.domElements.slider.value = caseId;
+    this.domElements.slider.addEventListener("input", ({ target }) => {
+      chrome.storage.session.set({ actionId: target.value });
+      this.sendAction(target.value);
     });
   }
 
+  async setConfig() {
+    const { actionId } = await chrome.storage.session.get("actionId");
+    this.domElements.slider.value = actionId;
+    this.sendAction(actionId);
+  }
+
   init() {
+    this.setConfig();
     this.doBinds();
   }
 }

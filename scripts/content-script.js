@@ -37,11 +37,11 @@ const getButtonElement = () =>
     )
     ?.closest("button");
 
-const actionsScript = (caseId) => {
+const actionsScript = (actionId) => {
   const button = getButtonElement();
-  if (!button) return {};
+  if (!button) return;
 
-  const mapCaseIdToName = {
+  const actionsMap = {
     minimum: "1",
     medium: "2",
     maximum: "3",
@@ -50,17 +50,24 @@ const actionsScript = (caseId) => {
   const cautionHandler = cautionHandlerBuilder({ button });
   cautionHandler.initial();
 
-  switch (caseId) {
-    case mapCaseIdToName.minimum:
+  switch (actionId) {
+    case actionsMap.minimum:
       cautionHandler.minimum();
       break;
-    case mapCaseIdToName.medium:
+    case actionsMap.medium:
       cautionHandler.medium();
       break;
-    case mapCaseIdToName.maximum:
+    case actionsMap.maximum:
       cautionHandler.maximum();
       break;
   }
 };
 
-chrome.runtime.onMessage.addListener(({ caseId }) => actionsScript(caseId));
+chrome.runtime.onMessage.addListener(({ actionId }) => actionsScript(actionId));
+
+// Initialize the initial state
+document.onreadystatechange = () => {
+  if (document.readyState === "complete") {
+    chrome.runtime.sendMessage("actionId");
+  }
+};
