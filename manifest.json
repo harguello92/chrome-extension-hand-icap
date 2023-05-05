@@ -1,7 +1,7 @@
 {
   "name": "Google meet hand-icap",
-  "version": "0.0.1",
-  "description": "Designed to improve the experience of using emoji reaction in google meet",
+  "version": "1.0.0",
+  "description": "This is a simple Chrome extension that disables the 'hands up' button in popular Google Meets.",
   "manifest_version": 3,
   "author": "harguello92",
   "permissions": [
