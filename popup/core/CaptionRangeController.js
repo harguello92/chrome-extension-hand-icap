@@ -17,13 +17,13 @@ export default class CaptionRangeController {
 
   doBinds() {
     this.domElements.slider.addEventListener("input", ({ target }) => {
-      chrome.storage.session.set({ actionId: target.value });
+      chrome.storage.local.set({ actionId: target.value });
       this.sendAction(target.value);
     });
   }
 
   async setConfig() {
-    const { actionId } = await chrome.storage.session.get("actionId");
+    const { actionId } = await chrome.storage.local.get("actionId");
     this.domElements.slider.value = actionId;
     this.sendAction(actionId);
   }
