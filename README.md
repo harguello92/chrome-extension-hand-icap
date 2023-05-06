@@ -16,3 +16,9 @@
 ## Available in
 
 [![Chrome](assets/chrome.svg "Chrome")](https://chrome.google.com/webstore/detail/bljlecllhladobdompcodikpgoppgdbi)
+
+</br>
+
+## Contributing
+
+Even though is a plugin with a short lifetime, feel free to contribute adding new issues or PR.
