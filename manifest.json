@@ -6,8 +6,7 @@
   "author": "harguello92",
   "permissions": [
     "activeTab",
-    "storage",
-    "tabs"
+    "storage"
   ],
   "action":{
       "default_popup": "popup/popup.html",
