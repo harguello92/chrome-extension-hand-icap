@@ -1,6 +1,6 @@
 {
   "name": "google-meet-hand-icap",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Designed to improve the experience of using emoji reaction in google meet",
   "type": "module",
   "scripts": {
