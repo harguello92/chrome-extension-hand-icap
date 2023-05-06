@@ -12,6 +12,7 @@
 <p>This extension is free and open-source, and contributions are welcome. If you have any issues or suggestions, feel free to open an issue on the Github repository.</>
 
 </br>
+</br>
 
 ## Available in
 
