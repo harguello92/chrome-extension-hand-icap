@@ -13,7 +13,7 @@
 
 ## Available in
 
-[![Chrome](assets/chrome.svg "Chrome")](https://chrome.google.com/webstore/detail/bljlecllhladobdompcodikpgoppgdbi)
+[![Chrome](./assets/chrome.svg "Chrome")](https://chrome.google.com/webstore/detail/bljlecllhladobdompcodikpgoppgdbi)
 
 ## Contributing
 
